@@ -1,0 +1,39 @@
+{
+    "name": "bc-automotive/master-api-client",
+    "description": "bFlash Master Api Client",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Miguel De Buf",
+            "email": "miguel.debug@orionsoftware.be"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "orchestra/testbench": "^6.18"
+    },
+    "autoload": {
+        "psr-4": {
+            "BcAutomotive\\MasterApiClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BcAutomotive\\MasterApiClient\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BcAutomotive\\MasterApiClient\\Providers\\MasterApiClientServiceProvider"
+            ],
+            "aliases": {
+                "MasterApiClient": "BcAutomotive\\MasterApiClient\\Facades\\MasterApiClient"
+            }
+        }
+    }
+}
